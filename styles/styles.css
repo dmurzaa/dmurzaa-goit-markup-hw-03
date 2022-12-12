@@ -36,9 +36,10 @@ body {
 .container {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
     width: 1158px;
+
 }
 
 .section {
@@ -167,7 +168,7 @@ body {
     background-color: var(--title-text-color);
     text-align: center;
     padding-top: 192px;
-    padding-bottom: 291px;
+    padding-bottom: 192px;
 }
 
 .hero-title {
@@ -192,6 +193,7 @@ body {
     background: var(--accent-color);
     border-radius: 4px;
     padding: 16px 32px;
+    border: none;
 }
 
 
@@ -226,7 +228,6 @@ body {
 .features {
     padding: 0px;
     margin: 0px;
-
     display: flex;
     flex-wrap: wrap;
     margin-left: calc( -1 * var(--card-set-gorizontal-gap));
@@ -236,6 +237,8 @@ body {
     flex-basis: calc(100% / 4 - var(--card-set-gorizontal-gap));
     margin-left: var(--card-set-gorizontal-gap);
 }
+
+
 
 .features .subtitle {
     margin-top: 0px;
@@ -289,25 +292,30 @@ body {
 
     display: flex;
     flex-wrap: wrap;
-    
-    margin-left: calc( -1 * var(--card-set-gorizontal-gap));
-    
 }
+
+
 
 .about-team .team-item {
-    margin-left: var(--card-set-gorizontal-gap);
     flex-basis: calc(100% / 4 - var(--card-set-gorizontal-gap));
+    margin-left: var(--card-set-gorizontal-gap);
 }
 
-.team-card {
-    background: var(--primary-white-color);
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    border-radius: 0px 0px 4px 4px;
-    overflow: hidden;
-}
 
 .staff-content {
     padding: 32px 16px;
+    background: var(--primary-white-color);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
+    
+}
+
+.team-item:first-child {
+    margin-left: 0px;
+}
+
+.team-item img {
+    display: block;
 }
 
 .about-team .staff {
@@ -336,7 +344,7 @@ body {
 /* Footer */
 
 .footer {
-    padding-top: 138px;
+    padding-top: 100px;
     padding-bottom: 100px;
     background-color: var(--title-text-color);
 }
@@ -361,7 +369,7 @@ body {
 
 .portfolio-nav {
     display: flex;
-    padding-bottom: 72px;
+    margin-bottom: 72px;
     justify-content: center;
 }
 
@@ -417,9 +425,6 @@ body {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
-    margin-left: calc( -1 * var(--card-set-gorizontal-gap));
-    margin-top: calc(-1 * var(--card-set-vertical-gap))
 }
 
 .portfolio .portf-item {
@@ -428,8 +433,19 @@ body {
     margin-top: var(--card-set-vertical-gap);
 }
 
+.portf-item img {
+    display: block;
+}
+
+.portf-item:nth-child(-n + 3) {
+    margin-top: 0px;
+}
+
+.portf-item:nth-child(3n + 1) {
+    margin-left: 0px;
+}
+
 .card-title {
-    margin-left: 16px;
     margin-top: 0px;
     margin-bottom: 8px;
     color: var(--title-text-color);
@@ -442,7 +458,6 @@ body {
 .card-text {
     margin-top: 0px;
     margin-bottom: 0px;
-    margin-left: 16px;
     color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.5;
@@ -450,10 +465,7 @@ body {
 }
 
 .card-content {
-    padding: 32px 0px;
-}
-
-.card {
+    padding: 32px 16px;
     border: 0.5px solid var(--second-white-color);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
